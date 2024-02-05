@@ -34,5 +34,15 @@ public class DemoShop {
         header.clickOnTheShoppingBagIcon();
         url = header.getUrl();
         System.out.println("Expected to be on the Home page. " + url);
+
+        System.out.println("------------------------");
+        System.out.println("4. User can navigate to Home Page from Cart Page. ");
+        homePage.openHomePage();
+        header.clickOnTheCartIcon();
+        url = header.getUrl();
+        System.out.println("Expected to be on the Cart page. " + url);
+        header.clickOnTheShoppingBagIcon();
+        url = header.getUrl();
+        System.out.println("Expected to be on the Home page. " + url);
     }
 }
