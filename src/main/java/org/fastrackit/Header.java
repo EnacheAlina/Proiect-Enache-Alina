@@ -21,4 +21,9 @@ public class Header {
        public String getUrl() {
            return url;
     }
+
+    public void clickOnTheCartIcon() {
+        System.out.println("Click on the Cart icon");
+        url = URL + "/#/cart";
+    }
 }
