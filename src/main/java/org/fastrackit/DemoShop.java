@@ -4,8 +4,8 @@ public class DemoShop {
     public static void main(String[] args) {
         System.out.println(" - = Demo Shop = -");
         System.out.println("1. User can login with valid credentials.");
-        HomePage homePage = new HomePage();
-        homePage.openHomePage();
+        Page page = new Page();
+        page.openHomePage();
         Header header = new Header();
         header.clickOnTheLoginButton();
         ModalDialog modal = new ModalDialog();
@@ -19,7 +19,7 @@ public class DemoShop {
 
         System.out.println("------------------------");
         System.out.println("2. User can add product to cart from product cards. ");
-        homePage.openHomePage();
+        page.openHomePage();
         ProductCards cards= new ProductCards();
         Product awesomeGraniteChips = cards.getProductByName("Awesome Granite Chips");
         System.out.println("Product is: " + awesomeGraniteChips.getTitle());
@@ -27,22 +27,22 @@ public class DemoShop {
 
         System.out.println("------------------------");
         System.out.println("3. User can navigate to Home Page from Wishlist Page. ");
-        homePage.openHomePage();
+        page.openHomePage();
         header.clickOnTheWishlistIcon();
-        String url = header.getUrl();
-        System.out.println("Expected to be on the Wishlist page. " + url);
+        String pageTitle = page.getPageTitle();
+        System.out.println("Expected to be on the Wishlist page. Title is:  " + pageTitle);
         header.clickOnTheShoppingBagIcon();
-        url = header.getUrl();
-        System.out.println("Expected to be on the Home page. " + url);
+        pageTitle = page.getPageTitle();
+        System.out.println("Expected to be on the Home page. Title is:  " + pageTitle);
 
         System.out.println("------------------------");
         System.out.println("4. User can navigate to Home Page from Cart Page. ");
-        homePage.openHomePage();
+        page.openHomePage();
         header.clickOnTheCartIcon();
-        url = header.getUrl();
-        System.out.println("Expected to be on the Cart page. " + url);
+        pageTitle = page.getPageTitle();
+        System.out.println("Expected to be on the Cart page. Title is: " + pageTitle);
         header.clickOnTheShoppingBagIcon();
-        url = header.getUrl();
-        System.out.println("Expected to be on the Home page. " + url);
+        pageTitle = page.getPageTitle();
+        System.out.println("Expected to be on the Home page. Title is: " + pageTitle);
     }
 }
