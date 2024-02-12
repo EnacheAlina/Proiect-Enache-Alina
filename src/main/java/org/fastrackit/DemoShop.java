@@ -9,7 +9,7 @@ public class DemoShop {
         Header header = new Header();
         header.clickOnTheLoginButton();
         ModalDialog modal = new ModalDialog();
-        modal.typeInUsername("dino");
+        modal.typeInUsername("turtle");
         modal.typeInPassword("choochoo");
         modal.clickOnTheLogingButton();
         String greetingsMessage = header.getGreetingsMessage();
@@ -21,9 +21,6 @@ public class DemoShop {
         System.out.println("2. User can add product to cart from product cards. ");
         page.openHomePage();
         ProductCards cards= new ProductCards();
-        Product awesomeGraniteChips = cards.getProductByName("Awesome Granite Chips");
-        System.out.println("Product is: " + awesomeGraniteChips.getTitle());
-        awesomeGraniteChips.ClickOnTheProductCartIcon();
 
         System.out.println("------------------------");
         System.out.println("3. User can navigate to Home Page from Wishlist Page. ");

@@ -1,8 +1,10 @@
 package org.fastrackit;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class Header {
 
@@ -10,11 +12,13 @@ public class Header {
     private final SelenideElement greetingsElement= $(".navbar-text span span");
     private final SelenideElement wishlistButton = $(".navbar .fa-heart");
     private final SelenideElement cartIcon= $(".fa-shopping-cart");
+    private final SelenideElement shoppingCartBadge= $(".shopping_cart_badge");
+    private final ElementsCollection shoppingCartBadges= $$(".shopping_cart_badge");
     private final SelenideElement homePageButton = $("[data-icon=shopping-bag]");
 
     public void clickOnTheLoginButton(){
         loginButton.click();
-        System.out.println("Click on the login button.");
+        System.out.println("Click on the Login button.");
     }
     public String getGreetingsMessage() {
         return greetingsElement.text();
@@ -25,9 +29,17 @@ public class Header {
     }
     public void clickOnTheShoppingBagIcon() {
         System.out.println("Click on the Shopping bag icon. ");
+        homePageButton.click();
     }
     public void clickOnTheCartIcon() {
         System.out.println("Click on the Cart icon");
         cartIcon.click();
+    }
+    public String getShoppingCartBadgeValue () {
+        return this.shoppingCartBadge.text();
+    }
+
+    public boolean isShoppingBadgeVisible() {
+        return !this.shoppingCartBadges.isEmpty();
     }
 }
