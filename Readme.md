@@ -2,7 +2,7 @@
 
 ## Technology
 - Java 19
-- -TestNG
+- TestNG
 - Allure Reports
 
 ## Description
