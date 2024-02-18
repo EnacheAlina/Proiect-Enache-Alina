@@ -43,12 +43,12 @@ import static org.testng.Assert.assertEquals;
             assertEquals(page.getPageTitle(), "Wishlist", "Expected to be on the Wishlist Page.");
         }
 
-        @Description("Users can navigate to Home Page from Wishlist Page")
+        @Description("User can navigate to Home Page from Wishlist Page")
         @Severity(SeverityLevel.CRITICAL)
         @Owner("Alina Enache")
         @Issue("DMS-001")
         @Link(name = "Fastrackit", url = "https://recruit-me.it/moodle/mod/url/view.php?id=10630")
-        @Story("Users can navigate to Home page from Wishlist Page")
+        @Story("User can navigate to Home page from Wishlist Page")
 
 
         @Test(dataProvider = "validCredentials", dataProviderClass = AuthenticationUserDataProvider.class)

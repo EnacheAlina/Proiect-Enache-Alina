@@ -14,7 +14,7 @@ public class ModalDialog {
     private final SelenideElement closeModal = $(".close");
 
     @Step("Type in username")
-    public void typeInUsername(String user) {
+        public void typeInUsername(String user) {
         System.out.println("Click on the Username field. ");
         username.click();
         System.out.println("Type in " + user);

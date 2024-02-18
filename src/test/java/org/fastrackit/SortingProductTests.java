@@ -20,7 +20,7 @@ public class SortingProductTests {
         footer.clickToReset();
     }
         @Test
-     public void when_sorting_products_A_to_Z_products_are_sorted_alphabetically_ASC() {
+     public void when_sorting_products_A_to_Z_products_are_sorted_alphabetically_ASCE() {
         Product firstProductBeforeSort= productList.getFirstProductInList();
         Product lastProductBeforeSort= productList.getLastProductInList();
         productList.clickOnTheSortButton();

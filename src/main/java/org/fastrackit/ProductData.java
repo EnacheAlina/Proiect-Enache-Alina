@@ -17,7 +17,6 @@ public class ProductData {
     public Product getProduct() {
         return product;
     }
-
     public String getId() {
         return id;
     }

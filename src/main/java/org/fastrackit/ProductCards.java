@@ -38,7 +38,8 @@ public class ProductCards {
         SelenideElement first = cards.first();
         return new Product(first);
     }
-    public Product getLastProductInList() {
+
+        public Product getLastProductInList() {
         SelenideElement last = cards.last();
         return new Product(last);
     }

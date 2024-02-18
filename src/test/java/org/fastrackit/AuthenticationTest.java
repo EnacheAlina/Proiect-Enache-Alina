@@ -45,12 +45,12 @@ public class AuthenticationTest extends Config {
         assertEquals(header.getGreetingsMessage(), account.getGreetingsMsg(), "Logged in with valid user, expected greetings message to be: " + account.getGreetingsMsg());
     }
 
-    @Description("Users cannot login with invalid credentials")
+    @Description("User cannot login with invalid credentials")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("Alina Enache")
     @Issue("DMS-002")
     @Link(name = "Fastrackit", url = "https://recruit-me.it/moodle/mod/url/view.php?id=10630")
-    @Story("Login with invalid credentials")
+    @Story("Login users with invalid credentials")
 
     @Test(dataProvider = "invalidCredentials", dataProviderClass = AuthenticationUserDataProvider.class, description = "User cannot login with invalid credentials. ")
     public void non_functional_authentication(InvalidAccount account) {

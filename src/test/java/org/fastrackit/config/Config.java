@@ -4,7 +4,7 @@ import com.codeborne.selenide.Configuration;
 
 public class Config {
     public Config() {
-        Configuration.browser = "chrome";
+        Configuration.browser = "Chrome";
         Configuration.headless = true;
     }
 }

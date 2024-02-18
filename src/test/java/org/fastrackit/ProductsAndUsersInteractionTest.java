@@ -29,7 +29,6 @@ public class ProductsAndUsersInteractionTest {
         Selenide.clearBrowserCookies();
         footer.clickToReset();
     }
-
     @Test(dataProviderClass = UserAndProductDataProvider.class, dataProvider = "userAndProduct")
     public void logged_in_user_can_add_a_product_to_cart(ValidAccount account, ProductData productData) {
         header.clickOnTheLoginButton();

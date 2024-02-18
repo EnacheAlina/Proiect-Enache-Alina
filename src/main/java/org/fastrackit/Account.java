@@ -1,6 +1,6 @@
 package org.fastrackit;
 
-public class Account {
+    public class Account {
     private final String user;
     private final String password;
 
