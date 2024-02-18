@@ -29,7 +29,7 @@ public class ProductsAddingTests {
 
     @Epic("Login")
     @Severity(SeverityLevel.CRITICAL)
-    @Feature("User can Login to DemoShop App.")
+    @Feature("Users can Login to DemoShop App.")
 
     @Test
     public void user_can_add_product_to_cart_from_product_cards() {

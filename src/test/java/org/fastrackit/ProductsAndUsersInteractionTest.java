@@ -1,6 +1,9 @@
 package org.fastrackit;
 
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.fastrackit.DataProvider.UserAndProductDataProvider;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -8,6 +11,9 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
+
+@Severity(SeverityLevel.CRITICAL)
+@Feature("Users can add products to cart.")
 
 public class ProductsAndUsersInteractionTest {
 

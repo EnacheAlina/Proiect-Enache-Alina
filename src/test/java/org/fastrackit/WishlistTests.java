@@ -44,7 +44,7 @@ import static org.testng.Assert.assertEquals;
         }
 
         @Description("User can navigate to Home Page from Wishlist Page")
-        @Severity(SeverityLevel.CRITICAL)
+        @Severity(SeverityLevel.MINOR)
         @Owner("Alina Enache")
         @Issue("DMS-001")
         @Link(name = "Fastrackit", url = "https://recruit-me.it/moodle/mod/url/view.php?id=10630")

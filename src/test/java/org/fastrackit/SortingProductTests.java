@@ -1,5 +1,9 @@
 package org.fastrackit;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,6 +23,11 @@ public class SortingProductTests {
         Footer footer = new Footer();
         footer.clickToReset();
     }
+
+    @Description("Users can sort products")
+    @Severity(SeverityLevel.NORMAL)
+    @Owner("Alina Enache")
+
         @Test
      public void when_sorting_products_A_to_Z_products_are_sorted_alphabetically_ASCE() {
         Product firstProductBeforeSort= productList.getFirstProductInList();

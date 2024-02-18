@@ -26,7 +26,7 @@ public class CartNavigationTests {
         Selenide.clearBrowserCookies();
     }
 
-    @Description("Users can navigate to CartPage")
+    @Description("User can navigate to CartPage")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("Alina Enache")
     @Issue("DMS-003")

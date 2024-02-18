@@ -1,5 +1,4 @@
 package org.fastrackit.DataProvider;
-
 import org.fastrackit.ProductData;
 import org.testng.annotations.DataProvider;
 
@@ -15,7 +14,6 @@ public class ProductsDataProvider {
                 {ich}
         };
     }
-
     public ProductData getAgc() {
         return agc;
     }

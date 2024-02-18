@@ -45,7 +45,7 @@ public class AuthenticationTest extends Config {
         assertEquals(header.getGreetingsMessage(), account.getGreetingsMsg(), "Logged in with valid user, expected greetings message to be: " + account.getGreetingsMsg());
     }
 
-    @Description("User cannot login with invalid credentials")
+    @Description("Users cannot login with invalid credentials")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("Alina Enache")
     @Issue("DMS-002")

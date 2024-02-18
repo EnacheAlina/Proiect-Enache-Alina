@@ -1,16 +1,8 @@
 package org.fastrackit.DataProvider;
 
-import com.codeborne.selenide.Selenide;
-import io.qameta.allure.*;
 import org.fastrackit.*;
-import org.fastrackit.config.Config;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import org.testng.annotations.DataProvider;
 
 public class AuthenticationUserDataProvider {
     static ValidAccount dino = new ValidAccount("dino", "choochoo");
