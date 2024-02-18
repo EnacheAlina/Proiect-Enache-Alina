@@ -1,43 +1,36 @@
 package org.fastrackit;
 
-import io.qameta.allure.*;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.fastrackit.DataProvider.ProductsDataProvider;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-@Epic("Login")
-@Severity(SeverityLevel.CRITICAL)
-@Feature("User can Login to Demoshop app")
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
-
-public class DemoShopCartTest {
+public class ProductsAddingTests {
     Page page = new Page();
     Header header = new Header();
-    ModalDialog modal = new ModalDialog();
+    CartPage cartPage = new CartPage();
 
     @BeforeClass
     public void setup() {
         page.openHomePage();
     }
-        @AfterMethod
+
+    @AfterMethod
     public void cleanup() {
         Footer footer = new Footer();
         footer.clickToReset();
     }
 
-    @Test
-    public void user_can_navigate_to_CartPage() {
-        header.clickOnTheCartIcon();
-        assertEquals(page.getPageTitle(), "Your cart", "Expected to be on the Cart Page.");
-    }
-
-    @Test
-    public void user_can_navigate_to_Home_Page_from_CartPage() {
-        header.clickOnTheCartIcon();
-        header.clickOnTheShoppingBagIcon();
-        assertEquals(page.getPageTitle(), "Products", "Expected to be on the Products Page.");
-    }
+    @Epic("Login")
+    @Severity(SeverityLevel.CRITICAL)
+    @Feature("User can Login to DemoShop App.")
 
     @Test
     public void user_can_add_product_to_cart_from_product_cards() {
@@ -45,7 +38,7 @@ public class DemoShopCartTest {
         product.clickOnTheProductCartIcon();
         assertTrue(header.isShoppingBadgeVisible());
         String badgeValue = header.getShoppingCartBadgeValue();
-        assertEquals(badgeValue, "1", "After adding one product to cart, badge shows 1. ");
+        assertEquals(badgeValue, "1", "After adding one product to cart, badge shows 1.");
     }
 
     @Test
@@ -55,6 +48,9 @@ public class DemoShopCartTest {
         product.clickOnTheProductCartIcon();
         assertTrue(header.isShoppingBadgeVisible());
         String badgeValue = header.getShoppingCartBadgeValue();
-        assertEquals(badgeValue, "2", "After adding two product to cart, badge shows 2. ");
+        assertEquals(badgeValue, "2", "After adding two products to cart, badge shows 2.");
     }
 }
+
+
+

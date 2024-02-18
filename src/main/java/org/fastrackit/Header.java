@@ -33,6 +33,8 @@ public class Header {
         System.out.println("Click on the Shopping bag icon. ");
         homePageButton.click();
     }
+
+    @Step("Click on the Cart Icon Button.")
     public void clickOnTheCartIcon() {
         System.out.println("Click on the Cart icon");
         cartIcon.click();
@@ -44,4 +46,6 @@ public class Header {
     public boolean isShoppingBadgeVisible() {
         return !this.shoppingCartBadges.isEmpty();
     }
-}
+
+    }
+

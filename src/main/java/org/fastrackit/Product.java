@@ -2,6 +2,7 @@ package org.fastrackit;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -33,6 +34,9 @@ public class Product {
     public String getPrice() {
         return price;
     }
+
+    @Step("Click on the Product Cart Icon.")
+
     public void clickOnTheProductCartIcon() {
         System.out.println("Click on the Cart icon.");
         this.addToCartButton.click();

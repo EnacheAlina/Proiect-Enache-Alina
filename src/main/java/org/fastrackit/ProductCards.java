@@ -38,12 +38,10 @@ public class ProductCards {
         SelenideElement first = cards.first();
         return new Product(first);
     }
-
     public Product getLastProductInList() {
         SelenideElement last = cards.last();
         return new Product(last);
     }
-
     public Product getProductById(String productId) {
         for (SelenideElement product : cards) {
             if (product.$(".card-link").getAttribute("href").endsWith("/" + productId)) {

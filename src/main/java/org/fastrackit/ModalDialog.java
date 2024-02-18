@@ -4,7 +4,6 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
-import static org.testng.Assert.assertTrue;
 
 public class ModalDialog {
 
@@ -36,6 +35,10 @@ public class ModalDialog {
     }
     public boolean isErrorMessageVisible() {
         return errorMessage.isDisplayed();
+    }
+
+    public String getErrorMsg() {
+        return this.errorMessage.text();
     }
     public void clickToCloseModal() {
         closeModal.click();

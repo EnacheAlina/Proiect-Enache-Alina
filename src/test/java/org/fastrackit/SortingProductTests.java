@@ -1,13 +1,12 @@
 package org.fastrackit;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class ProductSortingTest {
+public class SortingProductTests {
     Page page = new Page();
     ProductCards  productList = new ProductCards();
 
@@ -64,7 +63,6 @@ public class ProductSortingTest {
     public void when_sorting_products_by_price_high_to_low_products_are_sorted_by_price_high_to_low() {
         productList.clickOnTheSortButton();
         productList.clickOnTheSortByPriceLoHi();
-
         Product firstProductBeforeSort= productList.getFirstProductInList();
         Product lastProductBeforeSort= productList.getLastProductInList();
         productList.clickOnTheSortButton();

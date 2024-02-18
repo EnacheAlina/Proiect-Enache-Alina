@@ -7,3 +7,4 @@
 
 ## Description
 This is a framework meant to test a Demo shop application.
+
